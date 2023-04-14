@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Sesion 5</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/a11y-light.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 class="titulos" style="font-size:38px"> Viernes de Código </h1>
+					<h2 style="font-size:35px"> Análisis de datos con python </h2>
+					<h2 style="font-size:35px"> Universidad del Norte - Departamento de Economía</h2>
+					<h3 style="font-size:30px"> Jorge Mario Orozco Thomas </h3>
+					<h3 style="font-size:30px"> Sesión 5: Manejo de DataFrames I </h3>
+					<h4 style="font-size:30px"> Abril de 2023 </h4>
+				</section>
+
+				<section data-auto-animate data-transition="convex">
+					<h1 style="font-size:60px">Programación</h1>
+					<ul style="list-style-type:'🎮'">
+						<li>Asistencia y registro</li>
+						<li>Importar dataframes</li>
+						<li>Diferentes formas de mostrar el dataframe</li>
+						<li>Atributos, funciones y metodos</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2 style="font-size:40px">Asistencia</h2>
+					<a href="https://forms.gle/kqb3bSqQAujvxZAg7" target="_blank">Asistencia</a>
+					<br>
+					<a href="https://github.com/Kin-George/Viernes-de-Codigo" target="_blank">Material</a>
+				</section>
+
+				<section data-auto-animate data-transition="convex">
+					<h2>Importar Dataframes</h2>
+					<p style="font-size: 30px; text-align: justify;">Existen varios formatos y varias maneras para trabajar con dataframes en pandas. 
+						Los formatos mas utilizados son archivos de excel, csv, dta.
+						El metodo para importar dichos archivos cambiara dependiendo del tipo.
+						Veamos algunos ejemplos:
+						<pre> <code data-trim data-noescape data-line-numbers="">
+							# Importar
+							"pd.read_excel('base_de_datos.xlsx')" # excel
+							"pd.read_csv('datos.csv')" # csv
+							"pd.read_stata('datos.dta')" #dta
+						</code></pre>
+					</p>
+				</section>
+
+				<section data-auto-animate>
+					<h2>Diferentes formas de mostrar el DataFrame</h2>
+					<p style="font-size: 30px; text-align: justify;">En pandas dependiendo de la necesidad que tengamos podemos mostrar de diferentes formas el dataframe; un resumen, primeros 5 datos, entre otras.
+					</p>
+					<pre> <code data-trim data-noescape data-line-numbers="">
+						# metodos para hacerlo
+						"head()" # 5 primeros datos.
+						"tail()" # 5 ultimos datos.
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 style="font-size: 40px;">Selección de columnas</h2>
+					<p style="text-align: justify;">Podemos seleccionar con que columnas queremos realizar nuestro análisis:</p>
+					<pre> <code data-trim data-noescape data-line-numbers="">
+						# Seleccion de columnas
+						"[metodo corchetes]" # Corchetes
+						"." # Metodo del punto.
+
+						# ¿Podemos seleccionar mas de una columna?
+					</code></pre>
+				</section>
+
+				<section>
+					<h2 style="font-size: 30px;">Atributos, funciones y metodos</h2>
+					<p style="text-align: justify;font-size: 20px;">Los atributos son las caracteristicas de una base de datos o sus propiedades estructurales: que tipo de datos contiene, sus dimensiones, etc.
+					Las funciones y metodos son algoritmos que podemos crear o manipular para realizar un analisis de datos efectivo.</p>
+					<pre> <code data-trim data-noescape data-line-numbers="">
+						# Atributos
+						"shape" # Dimensiones del dataframe
+						"index" # Comportamiento del dataframe
+						"columns" # obtener el nombre de las columnas 
+						"dtype" #obtener el tipo de datos de las variables
+
+						# metodos
+						"info()" #resumen del dataframe
+						"describe()" #summary del dataframe
+
+						#Funciones
+						"len" #numero de filas
+						"max" #maximo index
+						"min" #minimo index
+						"type" #tipo de data
+						"round" #redondear valores del dataframe
+					</code></pre>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
